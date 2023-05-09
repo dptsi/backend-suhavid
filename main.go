@@ -111,4 +111,31 @@ func main() {
 	for _, console := range gaming {
 		fmt.Println(console)
 	}
+
+	// map
+	myMap := map[string]string{
+		"ruby":       "is beautiful",
+		"go":         "is super fast",
+		"javascript": "hype",
+	}
+
+	delete(myMap, "ruby") // delete salah satu key dalam map
+
+	for key, value := range myMap {
+		fmt.Println("key : ", key, "  value: ", value)
+	}
+
+	// hitung rata-rata
+	scores := [...]int{100, 80, 73, 82, 32, 63}
+	var total int
+
+	for _, score := range scores {
+		total = total + score
+	}
+
+	jumlah := len(scores)
+	rataRata := float64(total) / float64(jumlah) //float64 untuk menjadikan tipedata int ke float
+
+	fmt.Println(rataRata)
+
 }
