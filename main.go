@@ -99,7 +99,7 @@ func main() {
 	length := len(languages)
 	fmt.Println(length)
 
-	// slice
+	// Slice
 	var gamingConsole []string
 	gamingConsole = append(gamingConsole, "PlayStation5")
 	gamingConsole = append(gamingConsole, "PlayStation2")
@@ -112,7 +112,7 @@ func main() {
 		fmt.Println(console)
 	}
 
-	// map
+	// Map
 	myMap := map[string]string{
 		"ruby":       "is beautiful",
 		"go":         "is super fast",
@@ -138,4 +138,23 @@ func main() {
 
 	fmt.Println(rataRata)
 
+	// Function multipe return
+	luas, keliling := calculate(10, 2)
+	fmt.Println(luas)
+	fmt.Println(keliling)
+}
+
+func calculate(panjang int, lebar int) (int, int) {
+	luas := panjang * lebar
+	keliling := 2 * (panjang + lebar)
+
+	return luas, keliling
+}
+
+// Function predifined return value
+func calculatePredifined(panjang int, lebar int) (luas int, keliling int) {
+	luas = panjang * lebar
+	keliling = 2 * (panjang + lebar)
+
+	return
 }
